@@ -17,4 +17,11 @@
 
 ---
 1. Скачать репозитарий с github:  
-``    
+`git clone https://github.com/remizovk/backup2.git`   
+2. Перейти в каталог с файлами и запустить Vagrantfile
+`vagrant up`  
+
+Мы подняли две виртуальных машины - **'backup'** и **'client'**.  
+
+3. Теперь нужно запустить файл backup.yml в результате чего ansible настроит удаленный бэкап каталога /etc с сервера **'client'** при помощи приложения borgbackup:  
+`ansible-playbook backup.yml`  
